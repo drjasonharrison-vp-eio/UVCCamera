@@ -13,6 +13,11 @@ allprojects {
         maven { url 'http://raw.github.com/drjasonharrison-vp-eio/libcommon/master/repository/' }
         jcenter()
     }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
 }
 
 task clean(type: Delete) {
