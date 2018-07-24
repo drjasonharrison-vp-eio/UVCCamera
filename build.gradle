@@ -27,7 +27,7 @@ ext {
 
     // because this is an ext pluging definition we don't have "buildToolVerision", "compilerVersion", etc
     // instead define these values and then refer to them in submodules
-	versionBuildTool = '27.0.0'
+	versionBuildTool = '27.0.3'
 	versionCompiler = 27
 	versionTarget = 27
     versionSdk = 27
