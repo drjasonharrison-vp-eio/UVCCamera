@@ -24,9 +24,14 @@ apply plugin: 'com.android.library'
 
 import org.apache.tools.ant.taskdefs.condition.Os
 
+repositories {
+        maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
+        jcenter()
+    }
+
 android {
-	compileSdkVersion versionCompiler
-	buildToolsVersion versionBuildTool
+    compileSdkVersion versionCompiler
+    buildToolsVersion versionBuildTool
 
 	compileOptions {
 		sourceCompatibility javaSourceCompatibility
@@ -34,8 +39,8 @@ android {
 	}
 
     defaultConfig {
-        minSdkVersion 14
-		targetSdkVersion versionTarget
+        minSdkVersion versionSdk
+		targetSdkVersion versionSdk
     }
 
     buildTypes {

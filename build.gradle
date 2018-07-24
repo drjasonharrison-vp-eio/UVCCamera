@@ -19,13 +19,20 @@ task clean(type: Delete) {
 	delete rootProject.buildDir
 }
 
+// TODO-JH can we use an android plugin here for buildToolsVersion, compileSdkVersion, etc?
+
 ext {
 	supportLibVersion = '25.3.1'  // variable that can be referenced to keep support libs consistent
-	commonLibVersion= '1.5.20'
-	versionBuildTool = '25.0.2'
-	versionCompiler = 25
-	versionTarget = 23
+	commonLibVersion = '1.5.20'
+
+    // because this is an ext pluging definition we don't have "buildToolVerision", "compilerVersion", etc
+    // instead define these values and then refer to them in submodules
+	versionBuildTool = '27.0.0'
+	versionCompiler = 27
+	versionTarget = 27
+    versionSdk = 27
 	versionNameString = '1.0.0'
+
 	javaSourceCompatibility = JavaVersion.VERSION_1_7
 	javaTargetCompatibility = JavaVersion.VERSION_1_7
 }
